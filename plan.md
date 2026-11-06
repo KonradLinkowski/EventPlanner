@@ -552,15 +552,15 @@ Each stage: Goal, Tasks, Order, Tech, Result, Acceptance, Study topics, Tests. D
 ### Stage 1 - Repository and project foundations
 - **Goal:** clean monorepo, conventions and build skeleton.
 - **Tasks / order:**
-  - [ ] Init git repo, `.gitignore`, `.editorconfig`, `README.md`, `LICENSE`.
-  - [ ] Parent Maven POM (Java 21, Spring Boot BOM, plugins: compiler, surefire, failsafe, jacoco, spotless/checkstyle).
-  - [ ] Create `services/event-service` skeleton (Spring Initializr: Web, JPA, Validation, Actuator, Flyway, Postgres, Lombok, MapStruct).
-  - [ ] Folder structure from section 8, `docs/adr/0001-monorepo.md`.
-  - [ ] Conventional commits + branching rules documented.
-  - [ ] Minimal `docker-compose.yml` with Postgres.
+  - [x] Init git repo, `.gitignore`, `.editorconfig`, `README.md`, `LICENSE`.
+  - [x] Parent Maven POM (Java 21, Spring Boot BOM, plugins: compiler, surefire, failsafe, jacoco, spotless/checkstyle).
+  - [x] Create `services/event-service` skeleton (Spring Initializr: Web, JPA, Validation, Actuator, Flyway, Postgres, Lombok, MapStruct).
+  - [x] Folder structure from section 8, `docs/adr/0001-monorepo.md`.
+  - [x] Conventional commits + branching rules documented.
+  - [x] Minimal `docker-compose.yml` with Postgres.
 - **Tech:** Maven, Git, Spring Initializr, Docker.
 - **Result:** `mvn verify` passes; app starts and `/actuator/health` is UP.
-- **Acceptance:** [ ] fresh clone builds with a single command; [ ] README explains how to run.
+- **Acceptance:** [x] fresh clone builds with a single command; [x] README explains how to run.
 - **Study:** Maven lifecycle and dependency management, BOM, Spring Boot auto-configuration, Twelve-Factor config, profiles.
 - **Tests:** context-loads smoke test.
 
