@@ -567,18 +567,18 @@ Each stage: Goal, Tasks, Order, Tech, Result, Acceptance, Study topics, Tests. D
 ### Stage 2 - Event Service and CRUD
 - **Goal:** complete, well-structured Event Service (no security yet).
 - **Tasks / order:**
-  - [ ] Flyway `V1__create_events.sql`.
-  - [ ] Entity, enum, value objects; repository.
-  - [ ] DTOs (records) + MapStruct mappers.
-  - [ ] Service layer with transactions; domain rules (cannot reduce capacity below sold).
-  - [ ] REST controller: CRUD, publish, cancel, search with `Pageable` + `Specification`/query.
-  - [ ] Bean Validation + `@RestControllerAdvice` with ProblemDetail.
-  - [ ] springdoc OpenAPI.
-  - [ ] Seat reservation endpoints (internal) with idempotency.
+  - [x] Flyway `V1__create_events.sql`.
+  - [x] Entity, enum, value objects; repository.
+  - [x] DTOs (records) + MapStruct mappers.
+  - [x] Service layer with transactions; domain rules (cannot reduce capacity below sold).
+  - [x] REST controller: CRUD, publish, cancel, search with `Pageable` + `Specification`/query.
+  - [x] Bean Validation + `@RestControllerAdvice` with ProblemDetail.
+  - [x] springdoc OpenAPI.
+  - [x] Seat reservation endpoints (internal) with idempotency.
   - [ ] Redis cache for GET (optional, can postpone to Stage 12).
 - **Tech:** Spring Web/Data JPA, Flyway, MapStruct, Validation.
 - **Result:** documented CRUD API working with Postgres.
-- **Acceptance:** [ ] all endpoints in section 10 (event part) work; [ ] validation errors return 400 Problem Details; [ ] migrations create schema from scratch; [ ] pagination works.
+- **Acceptance:** [x] all endpoints in section 10 (event part) work; [x] validation errors return 400 Problem Details; [x] migrations create schema from scratch; [x] pagination works.
 - **Study:** REST maturity/idempotent methods, status codes, JPA lifecycle, N+1, LAZY/EAGER, `@Transactional` propagation, DTO vs entity, optimistic vs pessimistic locking, Flyway vs Liquibase.
 - **Tests:** unit (service, mapper), `@WebMvcTest` controller, `@DataJpaTest` with Testcontainers, concurrency test for seat reservation.
 
